@@ -64,7 +64,9 @@ RegisterNumber:
 ```
 
 ## Output:
+### Elbow Method :
 ![image](https://github.com/arbasil05/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/144218037/aa5eac9a-2336-4c29-8681-019d03a473b4)
+### Cluster segmentation:
 ![image](https://github.com/arbasil05/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/144218037/4b4f73ab-5ec9-43e8-9645-22965cdbf6b8)
 
 
