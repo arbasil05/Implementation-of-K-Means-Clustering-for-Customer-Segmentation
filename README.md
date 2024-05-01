@@ -15,37 +15,24 @@ To write a program to implement the K Means Clustering for Customer Segmentation
 5. Output
 
 ## Program:
-### importing necessary modules and reading the data:
+
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
 data = pd.read_csv("D:/introduction to ML/jupyter notebooks/Mall_Customers.csv")
-```
-### checking for null values:
-```
 data.head()
 data.info()
 data.isnull().sum()
-```
-
-### Performing K means clustering:
-```
 from sklearn.cluster import KMeans
 wcss = []
 for i in range(1,11):
     kmeans = KMeans(n_clusters = i,init = "k-means++")
     kmeans.fit(data.iloc[:,3:]) 
     wcss.append(kmeans.inertia_)
-```
-### Plotting graph for elbow method:
-```
 plt.plot(range(1,11),wcss)
 plt.xlabel("No. of clusters")
 plt.ylabel("wcss")
 plt.title("Elbow Method")
-```
-### Predicting and plotting graph for the clusters:
-```
 km = KMeans(n_clusters = 5)
 km.fit(data.iloc[:,3:])
 y_pred = km.predict(data.iloc[:,3:])
